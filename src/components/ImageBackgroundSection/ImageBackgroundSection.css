@@ -1,0 +1,88 @@
+.image-background {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.image-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.image-background .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-section button {
+  width: 350px;
+  margin: 0px 20px;
+}
+
+.bottom-section .order {
+  background: #504848;
+  color: white;
+  border: none;
+}
+
+.bottom-section .demo {
+  background: rgb(196, 194, 194);
+  color: black;
+  border: none;
+}
+
+.feature-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+}
+
+.feature-items li {
+  padding: 0px 10px;
+  margin: 0px 15px;
+}
+
+.feature-items h6 {
+  font-size: 30px;
+  margin: 0px;
+}
+
+.feature-items p {
+  font-size: 14px;
+}
+
+.bottom-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 0.9s ease;
+}
+
+.bottom-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.top-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 0.9s ease;
+}
+
+.top-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
